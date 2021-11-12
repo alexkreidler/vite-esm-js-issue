@@ -1,8 +1,9 @@
 import express from "express";
 import { createPageRenderer } from "vite-plugin-ssr";
+import {resolve} from "path"
 
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
+const root = resolve(`${__dirname}/../src`);
 
 startServer();
 
@@ -18,9 +19,10 @@ async function startServer() {
       root,
       server: { middlewareMode: true },
     });
+    
     app.use(viteDevServer.middlewares);
   }
-
+  
   const renderPage = createPageRenderer({ viteDevServer, isProduction, root });
   app.get("*", async (req, res, next) => {
     const url = req.originalUrl;
