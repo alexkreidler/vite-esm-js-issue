@@ -3,7 +3,7 @@ import { createPageRenderer } from "vite-plugin-ssr";
 import {resolve} from "path"
 
 const isProduction = process.env.NODE_ENV === "production";
-const root = resolve(`${__dirname}/../src`);
+const root = resolve(`${__dirname}/..`);
 
 startServer();
 
