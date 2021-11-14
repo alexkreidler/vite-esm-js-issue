@@ -1,0 +1,31 @@
+{
+    "schema": {
+        "fields": [
+            {
+                "format": "%Y-%m-%d",
+                "name": "Date",
+                "type": "date"
+            },
+            {
+                "format": "default",
+                "name": "Country",
+                "type": "string"
+            },
+            {
+                "format": "default",
+                "name": "Confirmed",
+                "type": "integer"
+            },
+            {
+                "format": "default",
+                "name": "Recovered",
+                "type": "integer"
+            },
+            {
+                "format": "default",
+                "name": "Deaths",
+                "type": "integer"
+            }
+        ]
+    }
+}
